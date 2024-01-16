@@ -41,3 +41,51 @@ inityuya2 xs = reverse (tail (reverse xs))
 
 add' :: (Num a) => a -> (a -> a)
 add' x y = x + y
+
+{-
+3.11
+1.
+[Char]
+(Char, Char, Char)
+[(Bool, Char)]
+([Bool], [Char])
+[[a] -> [a]]
+
+3.
+second :: [a] -> a
+swap :: (a,b) -> (b,a)
+pair :: a -> b -> (a,b)
+double :: Num a => a -> a
+palindrome :: Eq a => [a] -> Bool
+twice :: (a -> a) -> a -> a
+-}
+
+-- 2
+bools :: [Bool]
+bools = [True, False]
+
+nums :: [[Int]]
+nums = [[2 * 3, 3 * 3], [3 + 3, 1 + 1]]
+
+numsanswer = [[1, 2], [3, 4], [5, 6]]
+
+add :: Int -> Int -> Int -> Int
+add a b c = a + b + c
+
+copy :: b -> (b, b)
+copy x = (x, x)
+
+applyuya :: (t1 -> t2) -> t1 -> t2
+applyuya f x = f x
+
+second xs = head (tail xs)
+
+swap (x, y) = (y, x)
+
+pair x y = (x, y)
+
+doubleyuya x = x * 2
+
+palindrome xs = reverse xs == xs
+
+twice f x = f (f x)
