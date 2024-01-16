@@ -1,0 +1,16 @@
+head [a]
+tail [a]
+[a] !! n
+take n [a]
+drop n [a]
+length [a]
+sum [a]
+product [a]
+[a] ++ [a]
+reverse [a]
+last [a]
+init [a]
+
+qsort [a]
+seqn [IO a]
+getChar
