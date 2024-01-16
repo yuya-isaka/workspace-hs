@@ -6,7 +6,7 @@ drop n [a]
 length [a]
 sum [a]
 product [a]
-[a] ++ [a]
+[a] ++ [b]
 reverse [a]
 last [a]
 init [a]
@@ -14,3 +14,99 @@ init [a]
 qsort [a]
 seqn [IO a]
 getChar
+
+not b
+sqrt n
+even n
+odd n
+
+sin n
+cos n
+tan n
+
+fst (a)
+
+zip [a] [b]
+id a
+negate n
+abs n
+signum n
+(+) n n
+(*) n n
+
+read s
+show s
+min a
+max a
+
+div n n
+mod n n
+/ n n
+recip n
+
+
+----------------------------
+
+型クラスはRustのトレイトみたいなもの
+(Javaのインタフェース？)
+
+基本クラス
+
+Eqクラス ... Bool Char String Int Integer Float Double
+同等クラス
+(==)
+(/=)
+関数型は違う
+
+Ordクラス ... Bool Char String Int Integer Float Double
+順序クラス
+(<)
+(<=)
+(>)
+(>=)
+min
+max
+辞書式で順序づけられる
+要素がこの型クラスのインスタンスならリストやタプルも
+
+Showクラス ... Bool Char String Int Integer Float Double
+表示可能クラス
+show
+値を文字列に変換
+要素がこの型クラスのインスタンスならリストやタプルも
+
+Readクラス ... Bool Char String Int Integer Float Double
+読込可能クラス
+read
+文字列の中を取り出す
+要素がこの型クラスのインスタンスならリストやタプルも
+::で結果の型を指定する（型推論できないから, 大抵の場合はできるけど）
+
+Numクラス ... Int Integer Float Double
+数値クラス
+(+)
+(-)
+(*)
+
+Integral ... Int Integer
+整数クラス
+div
+mod
+takeやdropといったプレリュードはInt型に制限されていたりするので、Integralクラスのインスタンスを適用できないといった制限がある。Data .Listモジュール使ったら解決できる
+
+Fractional ... Float Double
+分数クラス
+(/)
+recip
+
+Enum ... 列挙できるか
+
+Bounded ...上限と下限を持つ
+
+-------------------------------------------------
+
+:l ファイル
+:r ファイル
+:e ファイル
+:i 型クラス
+:t 値

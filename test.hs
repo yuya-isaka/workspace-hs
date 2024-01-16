@@ -38,3 +38,6 @@ inityuya xs = take (length xs - 1) xs
 
 inityuya2 :: [a] -> [a]
 inityuya2 xs = reverse (tail (reverse xs))
+
+add' :: (Num a) => a -> (a -> a)
+add' x y = x + y
