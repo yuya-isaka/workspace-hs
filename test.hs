@@ -89,3 +89,52 @@ doubleyuya x = x * 2
 palindrome xs = reverse xs == xs
 
 twice f x = f (f x)
+
+halve :: [a] -> ([a], [a])
+halve xs = splitAt n xs
+  where
+    n = length xs `div` 2
+
+third1 :: [a] -> a
+third1 xs = head (tail (tail xs))
+
+third2 :: [a] -> a
+third2 xs = xs !! 2
+
+third3 :: [a] -> a
+third3 xs = case xs of
+  (_ : _ : n3 : _) -> n3
+
+safetail1 :: [a] -> [a]
+safetail1 xs = if null xs then [] else tail xs
+
+safetail2 :: [a] -> [a]
+safetail2 xs
+  | null xs = []
+  | otherwise = tail xs
+
+safetail3 :: [a] -> [a]
+safetail3 [] = []
+safetail3 (_ : xs) = xs
+
+(||) :: Bool -> Bool -> Bool
+False || False = False
+_ || _ = True
+
+-- False || b = b
+-- True || _ = True
+
+andyuya a b =
+  if a
+    then
+      if b
+        then True
+        else False
+    else False
+
+tmpyuya a b =
+  if a
+    then b
+    else False
+
+multyuya = \x -> (\y -> (\z -> x * y * z))
